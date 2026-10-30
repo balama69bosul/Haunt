@@ -223,6 +223,8 @@ public sealed class OnlineSessionManager : MonoBehaviour
         {
             GUILayout.Label("ROOM CODE");
             GUILayout.TextField(_joinCode);
+            if (GUILayout.Button("Copy room code"))
+                GUIUtility.systemCopyBuffer = _joinCode;
         }
 
         GUILayout.Space(8);
